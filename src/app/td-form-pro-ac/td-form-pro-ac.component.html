@@ -1,0 +1,76 @@
+<section class="container">
+    <header>Registration Form</header>
+  
+    <form class="form" (ngSubmit)="OnFormSubmitted()" #regForm="ngForm">
+      <div class="column">
+        <div class="input-box">
+          <input type="text" placeholder="First Name" ngModel name="firstname" />
+        </div> 
+  
+        <div class="input-box">
+          <input type="text" placeholder="Last Name" ngModel name="lastname" />
+        </div>
+      </div>    
+  
+      <div class="input-box">
+        <input type="text" placeholder="Email" ngModel name="email" />
+      </div>
+  
+      <div class="column">
+        <div class="input-box">
+          <input type="number" placeholder="Phone Number" ngModel name="phonenumber" />
+        </div>
+        <div class="input-box">
+          <input type="date" placeholder="Date of Birth" ngModel name="dob" />
+        </div>
+      </div>
+  
+      <div class="input-box">
+        <input type="text" placeholder="username" ngModel name="username" />
+        <button class="btn-gen-username">
+          Create a Username
+        </button>
+      </div>
+  
+      <div class="gender-box">
+        <h3>Gender</h3>
+        <div class="gender-option">
+          <div class="gender">
+            <input type="radio" id="check-male" ngModel name="gender" />
+            <label for="check-male">male</label>
+          </div>
+          <div class="gender">
+            <input type="radio" id="check-female" ngModel name="gender" />
+            <label for="check-female">Female</label>
+          </div>
+          <div class="gender">
+            <input type="radio" id="check-other" ngModel name="gender" />
+            <label for="check-other">prefer not to say</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="input-box address">
+        <label>Address</label>
+        <input type="text" placeholder="Street address" ngModel name="street1" />
+        <input type="text" placeholder="Street address line 2" ngModel name="street2" />
+        <div class="column">
+          <div class="select-box">
+            <select name="country" ngModel>
+              <option hidden>Country</option>
+              <option>America</option>
+              <option>Japan</option>
+              <option>India</option>
+              <option>Nepal</option>
+            </select>
+          </div>
+          <input type="text" placeholder="City" name="city" ngModel/>
+        </div>
+        <div class="column">
+          <input type="text" placeholder="Region" name="region" ngModel/>
+          <input type="number" placeholder="Postal code" name="postalcode"ngModel />
+        </div>
+      </div>
+      <input type="submit" value="Submit" class="submit-btn" > 
+    </form>
+  </section>
