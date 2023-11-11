@@ -9,6 +9,11 @@ import { NgForm } from '@angular/forms';
 export class TdFormProAcComponent {
   @ViewChild('regForm') form:NgForm
 
+  genders = [
+    {id:'1',value:'male', display:'male'},
+    {id:'2',value:'female', display:'female'},
+    {id:'3',value:'other', display:'other'},
+  ]
   OnFormSubmitted(){
     console.log(this.form);
     console.log(this.form.value);

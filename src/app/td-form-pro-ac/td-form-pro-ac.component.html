@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" [ngClass]="{'form-shadow':regForm.touched}">
     <header>Registration Form</header>
   
     <form class="form" (ngSubmit)="OnFormSubmitted()" #regForm="ngForm">
@@ -35,18 +35,18 @@
       <div class="gender-box">
         <h3>Gender</h3>
         <div class="gender-option">
-          <div class="gender">
-            <input type="radio" id="check-male" ngModel name="gender" />
-            <label for="check-male">male</label>
+          <div class="gender" *ngFor="let gen of genders">
+            <input type="radio" [value]="gen.value" [id]="gen.id" ngModel name="gender" />
+            <label for="check-male">{{gen.display}}</label>
           </div>
-          <div class="gender">
-            <input type="radio" id="check-female" ngModel name="gender" />
+          <!-- <div class="gender">
+            <input type="radio" value="female" id="check-female" ngModel name="gender" />
             <label for="check-female">Female</label>
-          </div>
-          <div class="gender">
-            <input type="radio" id="check-other" ngModel name="gender" />
+          </div> -->
+          <!-- <div class="gender">
+            <input type="radio" value="others" id="check-other" ngModel name="gender" />
             <label for="check-other">prefer not to say</label>
-          </div>
+          </div> -->
         </div>
       </div>
   
@@ -56,7 +56,7 @@
         <input type="text" placeholder="Street address line 2" ngModel name="street2" />
         <div class="column">
           <div class="select-box">
-            <select name="country" ngModel>
+            <select name="country"  ngModel>
               <option hidden>Country</option>
               <option>America</option>
               <option>Japan</option>
