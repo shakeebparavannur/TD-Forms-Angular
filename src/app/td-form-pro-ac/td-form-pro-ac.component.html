@@ -9,6 +9,7 @@
           placeholder="First Name"
           ngModel
           name="firstname"
+          [(ngModel)]="firstName"
           required
           #fname="ngModel"
         />
@@ -26,6 +27,7 @@
           ngModel
           name="lastname"
           required
+          [(ngModel)]="lastName"
           #lname="ngModel"
         />
         <div>
@@ -43,6 +45,7 @@
         ngModel
         name="email"
         required
+        [(ngModel)]="emailAddress"
         email
         #email="ngModel"
       />
@@ -88,7 +91,7 @@
       </div>
     </div>
 
-    <div class="input-box address">
+    <div class="input-box address" ngModelGroup="address">
       <label>Address</label>
       <input type="text" placeholder="Street address" ngModel name="street1" />
       <input
