@@ -14,6 +14,9 @@ export class TdFormProAcComponent {
     {id:'2',value:'female', display:'female'},
     {id:'3',value:'other', display:'other'},
   ]
+  firstName:string=''
+  lastName:string=''
+  email:string=''
   OnFormSubmitted(){
     console.log(this.form);
     console.log(this.form.value);
