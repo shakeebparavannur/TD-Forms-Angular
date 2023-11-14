@@ -20,7 +20,5 @@ export class TdFormProAcComponent {
   OnFormSubmitted(){
     console.log(this.form);
     console.log(this.form.value);
-    
-    
   }
 }
