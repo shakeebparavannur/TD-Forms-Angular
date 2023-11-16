@@ -15,15 +15,26 @@ export class TdFormProAcComponent {
     {id:'2',value:'female', display:'female'},
     {id:'3',value:'other', display:'other'},
   ]
-  firstName:string='';
-  lastName:string='';
-  emailAddress:string='';
-  defaultCountry: string = 'India';
-  dob:string='';
+  firstName: string = '';
+  lastName: string = '';
+  dob: string = '';
+  emailAddress: string = '';
+  gender: string = '';
+  country: string = '';
+  city: string = '';
+  region: string = '';
+  postal: string = '';
+  userName: string = '';
   OnFormSubmitted(){
-    console.log(this.form);
-    console.log(this.form.value);
-    this.form.reset()
+    this.firstName = this.form.value.firstname;
+    this.lastName = this.form.value.lastname;
+    this.emailAddress = this.form.value.email;
+    this.country = this.form.value.address.country;
+    this.city = this.form.value.address.city;
+    this.region = this.form.value.address.region;
+    this.postal = this.form.value.address.postalcode;
+    this.userName = this.form.value.username;
+    this.dob = this.form.value.dob;
   }
   generateUsername(){
     let username = ''
