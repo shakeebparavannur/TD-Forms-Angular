@@ -18,10 +18,12 @@ export class TdFormProAcComponent {
   firstName:string='';
   lastName:string='';
   emailAddress:string='';
+  defaultCountry: string = 'India';
   dob:string='';
   OnFormSubmitted(){
     console.log(this.form);
     console.log(this.form.value);
+    this.form.reset()
   }
   generateUsername(){
     let username = ''
