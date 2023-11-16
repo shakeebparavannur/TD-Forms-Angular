@@ -44,24 +44,26 @@ export class TdFormProAcComponent {
     username=username.toLowerCase();
     console.log(username);
     this.form.value.username=username;
-    this.form.setValue({
-      firstname:this.form.value.firstname,
-      lastname:this.form.value.lastname,
-      email:this.form.value.email,
-      dob:this.form.value.dob,
-      gender:this.form.value.gender,
-      phonenumber:this.form.value.phonenumber,
-      username:username,
-      address:{
-       city:this.form.value.address.city,
-       country:this.form.value.address.country,
-       postalcode:this.form.value.address.postalcode,
-       region:this.form.value.address.region,
-       street1:this.form.value.address.street1,
-       street2:this.form.value.address.street2 ,
-      }
-   })
-
+  //   this.form.setValue({
+  //     firstname:this.form.value.firstname,
+  //     lastname:this.form.value.lastname,
+  //     email:this.form.value.email,
+  //     dob:this.form.value.dob,
+  //     gender:this.form.value.gender,
+  //     phonenumber:this.form.value.phonenumber,
+  //     username:username,
+  //     address:{
+  //      city:this.form.value.address.city,
+  //      country:this.form.value.address.country,
+  //      postalcode:this.form.value.address.postalcode,
+  //      region:this.form.value.address.region,
+  //      street1:this.form.value.address.street1,
+  //      street2:this.form.value.address.street2 ,
+  //     }
+  //  })
+      this.form.form.patchValue({
+        username:username,
+      })
   }
   
 }
