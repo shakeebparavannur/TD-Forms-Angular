@@ -92,6 +92,7 @@
         class="btn-gen-username"
         [disabled]="fname.invalid || lname.invalid || tempdob.invalid"
         (click)="generateUsername()"
+        type="button"
       >
         Create a Username
       </button>
@@ -137,7 +138,7 @@
       />
       <div class="column">
         <div class="select-box">
-          <select class="country" ngModel required>
+          <select name="country" class="country"  [ngModel]="defaultCountry" required>
             <option>Country</option>
             <option>America</option>
             <option>Japan</option>
