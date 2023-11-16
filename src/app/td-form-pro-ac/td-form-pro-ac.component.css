@@ -90,7 +90,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: #D9381E;
+    background: #1ed97f;
   }
   .form .submit-btn:hover {
     background: #FF2800;
@@ -118,10 +118,10 @@
   }
   
   .btn-gen-username{
-    margin: 10px 0px;
+    margin: 15px 0px;
     padding: 10px 30px;
     border-radius: 5px;
-    background: #FF2800;
+    background: #006aff;
     border: none;
     color: white;
   }
@@ -162,4 +162,14 @@
   span{
     padding: 5px 5px;
     font-weight: bold;
+  }
+  .country{
+    width: 100%;
+    margin-top: 5px;
+    color: #707070;
+    border-radius: 6px;
+    border: #333,1px solid;
+    
+    
+
   }
