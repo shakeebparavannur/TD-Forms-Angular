@@ -36,6 +36,7 @@ export class TdFormProAcComponent {
     this.userName = this.form.value.username;
     this.dob = this.form.value.dob;
   }
+  defaultCountry = 'india';
   generateUsername(){
     let username = ''
     if(this.firstName.length>=3){
